@@ -11,4 +11,4 @@ jobs:
           command: docker-compose build --build-arg VERSION_SUFFIX=$CIRCLE_BUILD_NUM
       - run:
           name: Run tests
-          command: FizzBuzzTest dotnet test
+          command: docker-compose run --rm fizzbuzztest dotnet test
