@@ -12,7 +12,7 @@ namespace Tests
         {
             var mock = new Mock<IFB>();
             mock.Setup(x => x.FizzBuzz(3)).Returns("Fizz");
-            FB fb = new FB(mock.Object);
+            //FB fb = new FB(mock.Object);
         }
 
 

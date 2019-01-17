@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  firsttestapp:
+    image: ${DOCKER_REGISTRY-}firsttestapp
+    build:
+      context: .
+      dockerfile: FirstTestApp/Dockerfile
+
+  fizzbuzztest:
+    image: ${DOCKER_REGISTRY-}fizzbuzztest
+    build:
+      context: .
+      dockerfile: FizzBuzzTest/Dockerfile
+
