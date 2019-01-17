@@ -1,6 +1,6 @@
 version: 2
 jobs:
-  build:
+  check:
     machine: 
       image: circleci/classic:201808-01 #used to push docker form 17 to 18 use 'machine: true' when this is no longer needed
       docker_layer_caching: true
@@ -12,3 +12,9 @@ jobs:
       - run:
           name: Run tests
           command: docker-compose run --rm fizzbuzztest dotnet test
+
+workflows:
+  version: 2
+  continuous_delivery:
+    jobs:
+      - check
